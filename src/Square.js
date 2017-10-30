@@ -19,7 +19,6 @@ export default class Square extends Component {
 	}
 
 	handleClick = () => {
-		this.props.onClick( this.props.square, this.props.x, this.props.y);
-	}
-
+		this.props.onClick(this.props.square, this.props.x, this.props.y);
+	};
 }

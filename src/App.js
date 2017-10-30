@@ -3,29 +3,16 @@ import Row from './Row';
 import './App.css';
 
 export default class App extends Component {
-
 	state = {
-		gameState: [
-			[0, 1, 0, 0, 0],
-			[0, 0, 1, 1, 0],
-			[1, 1, 0, 0, 1],
-			[1, 0, 0, 0, 0],
-			[0, 0, 1, 1, 1],
-		]
+		gameState: [[0, 1, 0, 0, 0], [0, 0, 1, 1, 0], [1, 1, 0, 0, 1], [1, 0, 0, 0, 0], [0, 0, 1, 1, 1]],
 	};
 
 	render() {
-		return (
-			<div className="App">
-				{this.state.gameState.map(this.renderRow)}
-			</div>
-		);
+		return <div className="App">{this.state.gameState.map(this.renderRow)}</div>;
 	}
 
 	renderRow = (row, y) => {
-		return (
-			<Row key={y} row={row} y={y} onClick={this.handleClick}/>
-		);
+		return <Row key={y} row={row} y={y} onClick={this.handleClick} />;
 	};
 
 	handleClick = (squareValue, x, y) => {
@@ -45,5 +32,5 @@ export default class App extends Component {
 			newGameState[y + 1][x] = newGameState[y + 1][x] ? 0 : 1;
 		}
 		this.setState({ gameState: newGameState });
-	}
+	};
 }
