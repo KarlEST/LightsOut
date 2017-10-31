@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 import './Square.css';
 
 export default class Square extends Component {
@@ -19,6 +20,10 @@ export default class Square extends Component {
 	}
 
 	handleClick = () => {
-		this.props.onClick(this.props.square, this.props.x, this.props.y);
+		this.props.onClick({
+			squareValue: this.props.square,
+			x: this.props.x,
+			y: this.props.y,
+		});
 	};
 }
