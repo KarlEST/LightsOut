@@ -10,7 +10,6 @@ export default class GameManager {
 		for (let i = 0; i < roundsToMakeAFakeMove; i++) {
 			const fieldPosition = this.generateRandomFieldPosition();
 			const { x, y } = fieldPosition;
-			console.log('x: ', x, ' & y: ', y, '& value: ', this.field[x][y]);
 
 			const square = {
 				squareValue: this.field[y][x],

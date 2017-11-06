@@ -12,11 +12,7 @@ export default class Square extends Component {
 
 	render() {
 		const name = this.props.square ? 'square lighted' : 'square';
-		return (
-			<div className={name} onClick={this.handleClick}>
-				{this.props.square}
-			</div>
-		);
+		return <div className={name} onClick={this.handleClick} />;
 	}
 
 	handleClick = () => {

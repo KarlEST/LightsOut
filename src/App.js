@@ -16,10 +16,12 @@ export default class App extends Component {
 	}
 
 	render() {
-		if (this.state.isWin) {
-			console.log('CHICKEN DINNER');
-		}
-		return <div className="App">{this.state.gameField.map(this.renderRow)}</div>;
+		return (
+			<div className="App">
+				{this.state.gameField.map(this.renderRow)}
+				{this.state.isWin ? <div className="Message">You won! Click to play again</div> : null}
+			</div>
+		);
 	}
 
 	renderRow = (row, y) => {
@@ -27,10 +29,14 @@ export default class App extends Component {
 	};
 
 	handleClick = square => {
-		this.gameManager.updateField(square);
+		if (this.state.isWin) {
+			this.gameManager.generateInitialField();
+		} else {
+			this.gameManager.updateField(square);
+		}
 
 		this.setState({
-			gameField: this.gameManager.field,
+			gameField: this.gameManager.getField(),
 			isWin: this.gameManager.isWin(),
 		});
 	};
