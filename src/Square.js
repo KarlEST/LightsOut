@@ -1,25 +1,26 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
+import Types from 'prop-types';
+import React from 'react';
+import classNames from 'classnames';
+
 import './Square.css';
 
-export default class Square extends Component {
-  static propTypes = {
-    square: PropTypes.number.isRequired,
-    x: PropTypes.number.isRequired,
-    y: PropTypes.number.isRequired,
-    onClick: PropTypes.func.isRequired,
-  };
+const Square = ({ square, x, y, onClick }) => (
+  <div
+    className={classNames('square', { lighted: square })}
+    onClick={() => onClick({ squareValue: square, x, y })}
+    onKeyPress={() => {}}
+    role="checkbox"
+    aria-label="square"
+    aria-checked={!!square}
+    tabIndex="0"
+  />
+);
 
-  render() {
-    const name = this.props.square ? 'square lighted' : 'square';
-    return <div className={name} onClick={this.handleClick} />;
-  }
+Square.propTypes = {
+  square: Types.number.isRequired,
+  x: Types.number.isRequired,
+  y: Types.number.isRequired,
+  onClick: Types.func.isRequired,
+};
 
-  handleClick = () => {
-    this.props.onClick({
-      squareValue: this.props.square,
-      x: this.props.x,
-      y: this.props.y,
-    });
-  };
-}
+export default Square;

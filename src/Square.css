@@ -1,20 +1,24 @@
 .square {
-	display: inline-block;
-	border-style: solid;
-	border-width: 1px;
-	width: 50px;
-	height: 50px;
-	background-color: #37517e;
+  display: inline-block;
+  border-style: solid;
+  border-width: 1px;
+  width: 50px;
+  height: 50px;
+  background-color: #37517e;
 }
 
-.square:hover {
-	background-color: #2e4369;
+.square:hover,
+.square:focus {
+  background-color: #2e4369;
+  outline: none;
 }
 
 .lighted {
-	background-color: #00b9ff;
+  background-color: #00b9ff;
 }
 
-.lighted:hover {
-	background-color: #00a4df;
+.lighted:hover,
+.lighted:focus {
+  background-color: #00a4df;
+  outline: none;
 }
