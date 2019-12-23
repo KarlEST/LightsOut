@@ -4,10 +4,10 @@ import classNames from 'classnames';
 
 import './Square.css';
 
-const Square = ({ square, x, y, onClick }) => (
+const Square = ({ square, onClick }) => (
   <div
     className={classNames('square', { lighted: square })}
-    onClick={() => onClick({ squareValue: square, x, y })}
+    onClick={onClick}
     onKeyPress={() => {}}
     role="checkbox"
     aria-label="square"
@@ -18,8 +18,6 @@ const Square = ({ square, x, y, onClick }) => (
 
 Square.propTypes = {
   square: Types.number.isRequired,
-  x: Types.number.isRequired,
-  y: Types.number.isRequired,
   onClick: Types.func.isRequired,
 };
 
