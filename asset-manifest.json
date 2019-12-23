@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/LightsOut/static/css/main.df8ff42c.chunk.css",
-    "main.js": "/LightsOut/static/js/main.acbd38b4.chunk.js",
-    "main.js.map": "/LightsOut/static/js/main.acbd38b4.chunk.js.map",
+    "main.css": "/LightsOut/static/css/main.60bae0de.chunk.css",
+    "main.js": "/LightsOut/static/js/main.e41a91d3.chunk.js",
+    "main.js.map": "/LightsOut/static/js/main.e41a91d3.chunk.js.map",
     "runtime-main.js": "/LightsOut/static/js/runtime-main.e622d7d1.js",
     "runtime-main.js.map": "/LightsOut/static/js/runtime-main.e622d7d1.js.map",
-    "static/js/2.f8772cf8.chunk.js": "/LightsOut/static/js/2.f8772cf8.chunk.js",
-    "static/js/2.f8772cf8.chunk.js.map": "/LightsOut/static/js/2.f8772cf8.chunk.js.map",
+    "static/js/2.e21c77d9.chunk.js": "/LightsOut/static/js/2.e21c77d9.chunk.js",
+    "static/js/2.e21c77d9.chunk.js.map": "/LightsOut/static/js/2.e21c77d9.chunk.js.map",
     "index.html": "/LightsOut/index.html",
-    "precache-manifest.8f379923a8697997f5ab275f09140ce1.js": "/LightsOut/precache-manifest.8f379923a8697997f5ab275f09140ce1.js",
+    "precache-manifest.45d4410474ac22c0a3db0626a6927bd9.js": "/LightsOut/precache-manifest.45d4410474ac22c0a3db0626a6927bd9.js",
     "service-worker.js": "/LightsOut/service-worker.js",
-    "static/css/main.df8ff42c.chunk.css.map": "/LightsOut/static/css/main.df8ff42c.chunk.css.map"
+    "static/css/main.60bae0de.chunk.css.map": "/LightsOut/static/css/main.60bae0de.chunk.css.map"
   },
   "entrypoints": [
     "static/js/runtime-main.e622d7d1.js",
-    "static/js/2.f8772cf8.chunk.js",
-    "static/css/main.df8ff42c.chunk.css",
-    "static/js/main.acbd38b4.chunk.js"
+    "static/js/2.e21c77d9.chunk.js",
+    "static/css/main.60bae0de.chunk.css",
+    "static/js/main.e41a91d3.chunk.js"
   ]
 }

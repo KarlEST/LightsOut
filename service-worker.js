@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/LightsOut/precache-manifest.8f379923a8697997f5ab275f09140ce1.js"
+  "/LightsOut/precache-manifest.45d4410474ac22c0a3db0626a6927bd9.js"
 );
 
 self.addEventListener('message', (event) => {
