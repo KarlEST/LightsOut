@@ -5,20 +5,22 @@
   width: 50px;
   height: 50px;
   background-color: #37517e;
+  color: black;
 }
 
-.square:hover,
-.square:focus {
+.square:hover {
   background-color: #2e4369;
-  outline: none;
 }
 
 .lighted {
   background-color: #00b9ff;
 }
 
-.lighted:hover,
-.lighted:focus {
+.lighted:hover {
   background-color: #00a4df;
+}
+
+.square:focus,
+.lighted:focus {
   outline: none;
 }
