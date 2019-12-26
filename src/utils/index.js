@@ -1,1 +1,8 @@
-export { generateBoard, updateBoard, isWin } from './board';
+export {
+  generateBoard,
+  updateBoard,
+  isWin,
+  getInitialSolutionCountBoard,
+  updateSolutionCountBoard,
+  getMinimumMoves,
+} from './board';

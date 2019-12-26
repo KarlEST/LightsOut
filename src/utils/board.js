@@ -8,7 +8,13 @@ const EMPTY_BOARD = [
 
 export function generateBoard() {
   // TESTING ONE:
-  // return [[0, 1, 0, 0, 0], [0, 0, 1, 1, 0], [1, 1, 0, 0, 1], [1, 0, 0, 0, 0], [0, 0, 1, 1, 1]];
+  // return [
+  //   [0, 1, 0, 0, 0],
+  //   [0, 0, 1, 1, 0],
+  //   [1, 1, 0, 0, 1],
+  //   [1, 0, 0, 0, 0],
+  //   [0, 0, 1, 1, 1],
+  // ];
 
   const roundsToMakeAFakeMove = 300;
   let board = EMPTY_BOARD;
@@ -51,6 +57,22 @@ export function isWin(board) {
   }
 
   return true;
+}
+
+export function getInitialSolutionCountBoard() {
+  return EMPTY_BOARD;
+}
+
+export function updateSolutionCountBoard(solutionBoard, { x, y }) {
+  const newSolutionBoard = JSON.parse(JSON.stringify(solutionBoard));
+
+  newSolutionBoard[y][x] = newSolutionBoard[y][x] ? 0 : 1;
+
+  return newSolutionBoard;
+}
+
+export function getMinimumMoves(solutionBoard) {
+  return solutionBoard.reduce((totalCount, row) => totalCount + row.filter(x => x).length, 0);
 }
 
 function getRandomPositionOnBoard() {

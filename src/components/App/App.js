@@ -1,11 +1,23 @@
 import React, { useState } from 'react';
 
 import { Gameboard, GameStatus } from '..';
-import { generateBoard, updateBoard, isWin } from '../../utils';
+import {
+  generateBoard,
+  updateBoard,
+  isWin,
+  getInitialSolutionCountBoard,
+  updateSolutionCountBoard,
+  getMinimumMoves,
+} from '../../utils';
+
 import './App.css';
 
 const App = () => {
   const [board, setBoard] = useState(() => generateBoard());
+  const [solutionCountBoard, setSolutionCountBoard] = useState(() =>
+    getInitialSolutionCountBoard(),
+  );
+  const [playerMoveCount, setPlayerMoveCount] = useState(0);
   const isWinnerWinnerChickenDinner = isWin(board);
 
   return (
@@ -15,13 +27,22 @@ const App = () => {
         board={board}
         onClick={square => {
           if (isWinnerWinnerChickenDinner) {
+            setPlayerMoveCount(0);
             setBoard(generateBoard());
+            setSolutionCountBoard(getInitialSolutionCountBoard());
           } else {
+            setPlayerMoveCount(playerMoveCount + 1);
             setBoard(updateBoard(board, square));
+            setSolutionCountBoard(updateSolutionCountBoard(solutionCountBoard, square));
           }
         }}
       />
-      {isWinnerWinnerChickenDinner ? <GameStatus /> : null}
+      {isWinnerWinnerChickenDinner ? (
+        <GameStatus
+          playerMoves={playerMoveCount}
+          minimumMoves={getMinimumMoves(solutionCountBoard)}
+        />
+      ) : null}
     </div>
   );
 };
